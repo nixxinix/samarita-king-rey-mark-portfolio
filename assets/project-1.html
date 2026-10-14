@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard | Your Name</title>
+  <meta name="description" content="A simple dashboard that turns a year of weather readings into charts anyone can read.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Font: IBM Plex Mono. If you are offline the page falls back to your device's monospace font. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <noscript>
+    <style>
+      .menu-btn, .panel-close, .overlay { display: none; }
+      .panel { position: static; width: auto; transform: none; visibility: visible; box-shadow: none; padding: 0 1.25rem 1rem; }
+      .panel-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.5rem; margin: 0; }
+      .panel-nav a { border: 0; }
+    </style>
+  </noscript>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Samarita's Portfolio</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" aria-hidden="true"></div>
+  <nav class="panel" id="site-nav" aria-label="Main menu">
+    <button class="round-btn panel-close" type="button" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="panel-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <section class="page-banner">
+      <div class="container">
+        <h1 data-reveal>Weather Dashboard</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Project Details</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="detail">
+          <div class="detail-main">
+            <figure class="detail-hero" data-reveal>
+              <img src="assets/img/project-1.svg" width="1200" height="900" alt="Main picture of the Weather Dashboard project">
+            </figure>
+            <div class="detail-block" data-reveal>
+              <h2>Overview</h2>
+              <p>This project collects daily temperature and rainfall readings and shows them as clear charts, so a family or a farm can see what the weather has been doing at a glance.</p>
+            </div>
+            <div class="detail-block" data-reveal>
+              <h2>The problem</h2>
+              <p>The raw numbers came from several files with different formats and many missing days. Reading them one by one was slow, and nobody could see the bigger picture.</p>
+            </div>
+            <div class="detail-block" data-reveal>
+              <h2>What I did</h2>
+              <ol><li>Cleaned and combined the files into one tidy table.</li><li>Filled small gaps carefully and marked days that were still missing.</li><li>Built charts for temperature, rainfall and the monthly average.</li><li>Tested the dashboard with three people and simplified the labels they found confusing.</li></ol>
+            </div>
+            <div class="detail-block" data-reveal>
+              <h2>The result</h2>
+              <p>The dashboard loads in under two seconds and was understood by every tester without any explanation.</p>
+            </div>
+          </div>
+
+          <aside class="facts" aria-labelledby="facts-title" data-reveal>
+            <h2 id="facts-title">Project information</h2>
+            <dl>
+              <div><dt>Category</dt><dd>Data</dd></div>
+              <div><dt>Date</dt><dd>March 2026</dd></div>
+              <div><dt>My role</dt><dd>Designer and developer</dd></div>
+              <div><dt>Tools</dt><dd>Python, SQL, Chart library</dd></div>
+            </dl>
+            <a class="btn" href="https://example.com" target="_blank" rel="noopener">View project<span class="sr-only"> (opens in a new tab)</span></a>
+            <a class="btn btn--ghost" href="https://github.com/your-username" target="_blank" rel="noopener">View code<span class="sr-only"> (opens in a new tab)</span></a>
+          </aside>
+        </div>
+
+        <nav class="pager" aria-label="More projects">
+          <a class="pager-prev" href="project-6.html" rel="prev">
+            <span class="pager-label">Previous project</span>
+            <span class="pager-title">Door Lock Prototype</span>
+          </a>
+          <a class="pager-next" href="project-2.html" rel="next">
+            <span class="pager-label">Next project</span>
+            <span class="pager-title">Smart Plant Monitor</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span data-year>2026</span> Your Name. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in a new tab)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+
+</body>
+</html>

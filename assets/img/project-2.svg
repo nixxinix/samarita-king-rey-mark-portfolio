@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder picture for project 2">
+<rect width="1200" height="900" fill="#22272e"/>
+<text x="60" y="100" font-family="monospace" font-size="44" font-weight="700" fill="#e6edf3">Project 2</text>
+<circle cx="600" cy="470" r="250" fill="none" stroke="#c9d1d9" stroke-width="10" opacity="0.35"/><circle cx="600" cy="470" r="190" fill="none" stroke="#c9d1d9" stroke-width="10" opacity="0.55"/><circle cx="600" cy="470" r="130" fill="none" stroke="#c9d1d9" stroke-width="10" opacity="0.75"/><circle cx="600" cy="470" r="70" fill="none" stroke="#c9d1d9" stroke-width="10" opacity="0.95"/><circle cx="600" cy="470" r="22" fill="#e6edf3"/>
+<text x="60" y="860" font-family="monospace" font-size="26" fill="#8b949e">Replace this picture (1200 x 900)</text>
+</svg>

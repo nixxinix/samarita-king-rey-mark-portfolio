@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder picture for project 3">
+<rect width="1200" height="900" fill="#22272e"/>
+<text x="60" y="100" font-family="monospace" font-size="44" font-weight="700" fill="#e6edf3">Project 3</text>
+<polyline points="150,640 330,520 500,580 680,380 860,430 1050,230" fill="none" stroke="#e6edf3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><polyline points="150,700 330,650 500,690 680,590 860,620 1050,520" fill="none" stroke="#8b949e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><line x1="150" y1="200" x2="150" y2="760" stroke="#444c56" stroke-width="2"/><line x1="330" y1="200" x2="330" y2="760" stroke="#444c56" stroke-width="2"/><line x1="500" y1="200" x2="500" y2="760" stroke="#444c56" stroke-width="2"/><line x1="680" y1="200" x2="680" y2="760" stroke="#444c56" stroke-width="2"/><line x1="860" y1="200" x2="860" y2="760" stroke="#444c56" stroke-width="2"/><line x1="1050" y1="200" x2="1050" y2="760" stroke="#444c56" stroke-width="2"/>
+<text x="60" y="860" font-family="monospace" font-size="26" fill="#8b949e">Replace this picture (1200 x 900)</text>
+</svg>
