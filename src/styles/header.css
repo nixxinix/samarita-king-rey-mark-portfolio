@@ -1,0 +1,122 @@
+/* Header and side menu */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.35s var(--ease);
+}
+.site-header.is-scrolled {
+  border-color: var(--line);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+}
+.site-header.is-hidden {
+  transform: translateY(-100%);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+  width: 100%;
+  padding-inline: var(--gutter);
+  max-width: none;
+  margin-inline: 0;
+}
+
+.brand {
+  font-size: clamp(1.25rem, 4.2vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* Icon-only burger — no border, no background */
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4rem 0.25rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.menu-btn:hover { color: var(--black); }
+
+/* Overlay hidden — panel slides in without dimming the page */
+.overlay { display: none; }
+
+/* Panel slides in from the RIGHT */
+.panel {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  z-index: 120;
+  width: min(320px, 85vw);
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  box-shadow: none;
+  transform: translateX(100%);
+  visibility: hidden;
+  overflow-y: auto;
+  transition: transform 0.35s var(--ease), visibility 0s linear 0.35s;
+}
+.panel.is-open {
+  transform: none;
+  visibility: visible;
+  transition: transform 0.35s var(--ease), visibility 0s;
+}
+
+.round-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.round-btn:hover:not(:disabled) { background: var(--black); color: #fff; border-color: var(--black); }
+.round-btn:disabled { opacity: 0.35; cursor: default; }
+
+/* X close button — absolute top-left inside the panel */
+.panel-close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.panel-close.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Nav links pushed down to clear the X button */
+.panel-nav ul { margin: 4.5rem 0 0; padding: 0; list-style: none; }
+.panel-nav a {
+  display: block;
+  padding: 1rem 0.25rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.panel-nav a:hover { color: var(--black); }
+/* Active page: bold black only, no left bar */
+.panel-nav a[aria-current="page"] {
+  font-weight: 700;
+  color: var(--black);
+}

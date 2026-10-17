@@ -1,0 +1,30 @@
+/* Design tokens: change colors, font and spacing here */
+
+:root {
+  /* Colors. Text colors pass WCAG AA (4.5:1) on white and on --surface. */
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --ink: #1b1b1b;
+  --ink-soft: #4d4d4d;
+  --line: #e3e3e3;
+  --line-strong: #8a8a8a;      /* borders of form fields, dots: 3:1 on white */
+  --black: #000000;
+  --focus: #0a58ca;
+  --danger: #b3261e;
+  --success: #1b6b34;
+
+  /* Fonts. Swap --font-body for a sans-serif if you want easier long reading,
+     for example: --font-body: "IBM Plex Sans", system-ui, sans-serif; */
+  --font: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas,
+          "Liberation Mono", monospace;
+  --font-body: var(--font);
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: clamp(1rem, 3vw, 1.5rem);
+  --header-h: 72px;
+  --section-space: clamp(4rem, 9vw, 7rem);
+  --radius: 8px;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

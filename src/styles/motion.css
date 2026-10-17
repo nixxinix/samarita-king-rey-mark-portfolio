@@ -1,0 +1,27 @@
+/* Motion: scroll reveal and reduced-motion support */
+
+/* Elements rendered with <Reveal> rise gently into place once, as they scroll
+   into view (see src/hooks/useReveal.js). */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+@media print {
+  .site-header, .panel, .overlay, .to-top, .filters, .marquee-controls { display: none !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+}
